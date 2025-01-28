@@ -19,3 +19,39 @@ int main(){
 }
 
 //Do not modify source code above this line
+void shuffle(int &a, int &b, int &c, int &d)
+{
+	int t, j;
+	int x = rand() % 3 + 1;
+	if (x == 1)
+	{
+		t = a;
+		a = b;
+		a = t;
+
+		j = c;
+		c = d;
+		d = j;
+	}
+	else if (x == 2)
+	{
+		t = b;
+		b = c;
+		b = t;
+
+		j = a;
+		a = d;
+		d = j;
+	}
+	else if (x == 3)
+	{
+
+		t = a;
+		a = c;
+		c = t;
+
+		j = b;
+		b = d;
+		d = j;
+	}
+}
